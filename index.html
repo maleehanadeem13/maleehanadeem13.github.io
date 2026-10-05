@@ -1,242 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Maleeha Nadeem — Software Engineer</title>
-<meta name="description" content="Portfolio and CV of Maleeha Nadeem, Software Engineering student and full-stack developer." />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Maleeha Nadeem | Full Stack Developer</title>
+<meta name="description" content="Maleeha Nadeem — Full Stack / MERN developer building clean, responsive, user-friendly web experiences. Browse real projects, internships and skills."/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%238c7bff'/%3E%3Cstop offset='100%25' stop-color='%23ff7ab0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='26' fill='white' text-anchor='middle'%3EMN%3C/text%3E%3C/svg%3E"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
 </head>
 <body>
-
-<div class="bg-glow"></div>
-
-<nav id="navbar">
-  <a href="#home" class="nav-logo">MN<span>.</span></a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <button id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+<canvas id="constellation" aria-hidden="true"></canvas>
+<header class="navbar">
+<a class="nav-brand" href="index.html">
+<span class="brand-mark">MN</span>
+<div class="logo">
+<h1>Maleeha Nadeem</h1>
+<h3>Full Stack / MERN Developer</h3>
+</div>
+</a>
+<input class="drawer-toggle" hidden="" id="drawerToggle" type="checkbox"/>
+<label aria-label="Open menu" class="hamburger" for="drawerToggle">
+<span></span><span></span><span></span>
+</label>
+<div class="nav-menu" id="navMenu">
+<label aria-label="Close menu" class="drawer-close" for="drawerToggle">
+<i class="fas fa-times"></i>
+</label>
+<nav>
+<ul class="nav-links">
+<li><a class="active" href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="index.html#education">Education</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="journey.html">Journey</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
 </nav>
-
-<header id="home" class="hero">
-  <div class="hero-inner">
-    <p class="eyebrow reveal">Hello, I'm</p>
-    <h1 class="hero-name reveal">Maleeha Nadeem</h1>
-    <h2 class="hero-role reveal"><span id="typed"></span><span class="cursor">|</span></h2>
-    <p class="hero-sub reveal">BS Software Engineering student at Fatima Jinnah Women University — building full-stack, real-time web applications and solid software architecture.</p>
-    <div class="hero-cta reveal">
-      <a href="#projects" class="btn btn-primary">View Projects</a>
-      <a href="#contact" class="btn btn-ghost">Get in Touch</a>
-    </div>
-    <div class="hero-socials reveal">
-      <a href="https://github.com/maleehanadeem13" target="_blank" rel="noopener" aria-label="GitHub">
-        <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2.9-.3 2-.4 3-.4s2.1.1 3 .4c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.9 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.73 18.27.5 12 .5z"/></svg>
-      </a>
-      <a href="mailto:maleehanadeem777@gmail.com" aria-label="Email">
-        <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.2 7.8 6.4 7.8-6.4a.5.5 0 0 0-.3-.9H4.5a.5.5 0 0 0-.3.9ZM20 7.4l-7.4 6.1a1 1 0 0 1-1.2 0L4 7.4v11.1c0 .3.2.5.5.5h15c.3 0 .5-.2.5-.5V7.4Z"/></svg>
-      </a>
-    </div>
-  </div>
-  <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+<a class="btn-small drawer-cta" href="contact.html">Let's Talk</a>
+</div>
+<label aria-label="Close menu" class="drawer-overlay" for="drawerToggle"></label>
 </header>
-
 <main>
 
-  <section id="about" class="section">
-    <p class="section-tag reveal">01 — Profile</p>
-    <h2 class="section-title reveal">About Me</h2>
-    <div class="about-grid">
-      <p class="about-text reveal">
-        Dedicated student of Software Engineering, with hands-on knowledge of full-stack real-time
-        application design and implementation using Node.js and WebSockets, database modeling with
-        SQL Server, C++ object-oriented programming, and strong software architecture (UML) skills.
-        Proactive, with an eagerness to solve challenging problems using skills gained through practice.
-      </p>
-      <div class="about-facts reveal">
-        <div class="fact">
-          <span class="fact-num" data-count="3.61">0</span>
-          <span class="fact-label">CGPA / 4.0</span>
-        </div>
-        <div class="fact">
-          <span class="fact-num" data-count="6">0</span>
-          <span class="fact-label">Academic Projects</span>
-        </div>
-        <div class="fact">
-          <span class="fact-num" data-count="2">0</span>
-          <span class="fact-label">Languages Spoken</span>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="hero-section" id="hero">
+<div class="hero-content">
+<span class="eyebrow">Available for internships &amp; freelance</span>
+<h2 class="split-title">
+<span class="hero-word" style="animation-delay:.05s">Building</span>
+<span class="hero-word highlight" style="animation-delay:.12s">clean,</span>
+<span class="hero-word highlight" style="animation-delay:.19s">modern</span>
+<span class="hero-word" style="animation-delay:.26s">web</span>
+<span class="hero-word" style="animation-delay:.33s">experiences</span>
+<span class="hero-word" style="animation-delay:.4s">that</span>
+<span class="hero-word" style="animation-delay:.47s">just</span>
+<span class="hero-word" style="animation-delay:.54s">work.</span>
+</h2>
+<p class="hero-lede">I'm Maleeha, a Full Stack / MERN developer who turns ideas into responsive, user-friendly products — from client marketing sites to React apps, shipped and live.</p>
+<div class="hero-btns">
+<a class="btn" href="projects.html"><i class="fas fa-diagram-project"></i> View My Work</a>
+<a class="btn btn-outline" href="Maleeha Nadeem -Full Stack DEVELOPER CV.pdf" target="_blank"><i class="fas fa-download"></i> Download CV</a>
+</div>
+<div class="hero-meta">
+<div><strong>24+</strong><span>GitHub Repos</span></div>
+<div><strong>16</strong><span>Live Projects</span></div>
+<div><strong>3</strong><span>Internships</span></div>
+</div>
+</div>
+<div class="hero-image-container">
+<div class="hero-visual">
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="avatar-frame">
+<img alt="Maleeha Nadeem" src="profile_picture.png"/>
+</div>
+<div class="tech-orbit" aria-hidden="true">
+<div class="orbit-ring ring-inner">
+<div class="orbit-item" style="--angle:0deg;"><div class="orbit-badge"><i class="fab fa-html5" style="color:#ff7a59;"></i><span class="orbit-tip">HTML5</span></div></div>
+<div class="orbit-item" style="--angle:60deg;"><div class="orbit-badge"><i class="fab fa-css3-alt" style="color:#6cb8ff;"></i><span class="orbit-tip">CSS3</span></div></div>
+<div class="orbit-item" style="--angle:120deg;"><div class="orbit-badge"><i class="fab fa-js" style="color:#ffd166;"></i><span class="orbit-tip">JavaScript</span></div></div>
+<div class="orbit-item" style="--angle:180deg;"><div class="orbit-badge"><i class="fab fa-react" style="color:#8c7bff;"></i><span class="orbit-tip">React</span></div></div>
+<div class="orbit-item" style="--angle:240deg;"><div class="orbit-badge"><i class="fab fa-git-alt" style="color:#f4623a;"></i><span class="orbit-tip">Git</span></div></div>
+<div class="orbit-item" style="--angle:300deg;"><div class="orbit-badge"><i class="fab fa-github"></i><span class="orbit-tip">GitHub</span></div></div>
+</div>
+<div class="orbit-ring ring-outer">
+<div class="orbit-item" style="--angle:30deg;"><div class="orbit-badge"><i class="fab fa-node-js" style="color:#6cc24a;"></i><span class="orbit-tip">Node.js</span></div></div>
+<div class="orbit-item" style="--angle:90deg;"><div class="orbit-badge"><i class="fas fa-server" style="color:#ada9ba;"></i><span class="orbit-tip">Express</span></div></div>
+<div class="orbit-item" style="--angle:150deg;"><div class="orbit-badge"><i class="fas fa-database" style="color:#4caf50;"></i><span class="orbit-tip">MongoDB</span></div></div>
+<div class="orbit-item" style="--angle:210deg;"><div class="orbit-badge"><i class="fas fa-wind" style="color:#38bdf8;"></i><span class="orbit-tip">Tailwind CSS</span></div></div>
+<div class="orbit-item" style="--angle:270deg;"><div class="orbit-badge"><i class="fab fa-bootstrap" style="color:#c179ff;"></i><span class="orbit-tip">Bootstrap</span></div></div>
+<div class="orbit-item" style="--angle:330deg;"><div class="orbit-badge"><i class="fab fa-figma" style="color:#ff7ab0;"></i><span class="orbit-tip">Figma</span></div></div>
+</div>
+</div>
+<div class="status-pill"><span class="status-dot"></span> Open to work</div>
+</div>
+</div>
+</section>
 
-  <section id="education" class="section">
-    <p class="section-tag reveal">02 — Education</p>
-    <h2 class="section-title reveal">Education</h2>
-    <div class="timeline">
-      <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <span class="timeline-date">2024 — Present</span>
-          <h3>BS Software Engineering</h3>
-          <p>Fatima Jinnah Women University</p>
-          <span class="badge">CGPA: 3.61 / 4.0</span>
-        </div>
-      </div>
-      <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <span class="timeline-date">2022 — 2024</span>
-          <h3>Intermediate (FSC / ICS)</h3>
-          <p>HCCS, FBISE</p>
-          <span class="badge">Marks: 917 / 1100</span>
-        </div>
-      </div>
-      <div class="timeline-item reveal">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <span class="timeline-date">2020 — 2022</span>
-          <h3>Matriculation (Science)</h3>
-          <p>Future Foundation School, FBISE</p>
-          <span class="badge">Marks: 984 / 1100</span>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="about-teaser" id="about">
+<div class="reveal">
+<span class="eyebrow">About Me</span>
+<h2 class="section-title">A developer who cares about <span class="grad">the details</span></h2>
+<p class="section-sub" style="max-width:720px;margin:0 0 24px;text-align:left;">I'm an aspiring Full Stack Web Developer with a passion for turning ideas into clean, functional, responsive experiences. Currently completing hands-on internships — most recently at EurosHub — while working toward becoming a professional MERN Stack developer.</p>
+<a class="btn-ghost" href="about.html">Read my full story <i class="fas fa-arrow-right"></i></a>
+</div>
+</section>
 
-  <section id="skills" class="section">
-    <p class="section-tag reveal">03 — Skills</p>
-    <h2 class="section-title reveal">Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-card reveal">
-        <h3>Programming &amp; Scripting</h3>
-        <div class="tags">
-          <span>C++</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span>
-          <span>T-SQL</span><span>SQL (Oracle)</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <h3>Core Concepts</h3>
-        <div class="tags">
-          <span>OOP</span><span>Data Structures</span><span>File Handling</span>
-          <span>UML &amp; SDA</span><span>DB Normalization (1NF–3NF)</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <h3>Web &amp; Backend</h3>
-        <div class="tags">
-          <span>Node.js</span><span>Express.js</span><span>Socket.io</span><span>WordPress</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <h3>Databases</h3>
-        <div class="tags">
-          <span>Microsoft SQL Server</span><span>Oracle Database 11g</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <h3>Tools &amp; IDEs</h3>
-        <div class="tags">
-          <span>VS Code</span><span>Visual Studio</span><span>Git</span><span>GitHub</span>
-          <span>CodeSandbox</span><span>Cisco Packet Tracer</span>
-        </div>
-      </div>
-      <div class="skill-card reveal">
-        <h3>Languages</h3>
-        <div class="tags">
-          <span>English (Fluent)</span><span>Urdu (Fluent)</span>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="education-section" id="education">
+<div class="section-head reveal">
+<span class="eyebrow">Education</span>
+<h2 class="section-title">Academic <span class="grad">Background</span></h2>
+</div>
+<div class="grid-auto reveal-grid">
+<div class="card education-card">
+<h3>Bachelor of Science in Software Engineering</h3>
+<h4>BSSE &middot; Fatima Jinnah Women University</h4>
+<span>2024 &ndash; Present &middot; CGPA 3.61 / 4.0</span>
+<p>Pursuing BS Software Engineering while gaining practical experience through internships and real projects.</p>
+</div>
+<div class="card education-card">
+<h3>HSSC (Higher Secondary School Certificate)</h3>
+<h4>ICS &middot; HCCS, FBISE</h4>
+<span>2022 &ndash; 2024 &middot; 917 / 1100</span>
+<p>Developed analytical thinking, problem-solving ability and a growing interest in technology.</p>
+</div>
+<div class="card education-card">
+<h3>SSC (Secondary School Certificate)</h3>
+<h4>Science Group &middot; Future Foundation School, FBISE</h4>
+<span>2020 &ndash; 2022 &middot; 984 / 1100</span>
+<p>Strong academic foundation in Mathematics, Computer Science and General Science.</p>
+</div>
+</div>
+</section>
 
-  <section id="projects" class="section">
-    <p class="section-tag reveal">04 — Work</p>
-    <h2 class="section-title reveal">Projects</h2>
-    <div class="projects-grid">
+<section class="skills-section" id="skills">
+<div class="section-head reveal">
+<span class="eyebrow">Toolkit</span>
+<h2 class="section-title">Skills &amp; <span class="grad">Technologies</span></h2>
+<p class="section-sub">The languages and tools I use to ship real products.</p>
+</div>
+<div class="grid-auto reveal-grid">
+<div class="card icon-card">
+<i class="fab fa-html5"></i>
+<h3>HTML5</h3>
+<p>Semantic, accessible markup as the foundation of every build.</p>
+</div>
+<div class="card icon-card">
+<i class="fab fa-css3-alt"></i>
+<h3>CSS3</h3>
+<p>Modern layouts with Flexbox, Grid, custom properties and animation.</p>
+</div>
+<div class="card icon-card">
+<i class="fab fa-js-square"></i>
+<h3>JavaScript</h3>
+<p>Interactive, dynamic front ends — DOM APIs, fetch, state and events.</p>
+</div>
+<div class="card icon-card">
+<i class="fab fa-react"></i>
+<h3>React</h3>
+<p>Component-driven apps with hooks, context and client-side routing.</p>
+</div>
+<div class="card icon-card">
+<i class="fas fa-mobile-screen-button"></i>
+<h3>Responsive Design</h3>
+<p>Interfaces that hold up cleanly from a phone to a wide desktop.</p>
+</div>
+<div class="card icon-card">
+<i class="fab fa-git-alt"></i>
+<h3>Git &amp; GitHub</h3>
+<p>Version control, branching and shipping — 24+ repos and counting.</p>
+</div>
+</div>
+</section>
 
-      <article class="project-card reveal">
-        <div class="project-num">01</div>
-        <h3>Real-Time inDrive Clone</h3>
-        <p>Full-stack ride-sharing portal built with Node.js, Express.js, and JavaScript. Integrated Socket.io for live bidding and managed sessions via localStorage.</p>
-        <div class="tags"><span>Node.js</span><span>Express.js</span><span>Socket.io</span></div>
-      </article>
+<section class="services-section" id="services">
+<div class="section-head reveal">
+<span class="eyebrow">What I Do</span>
+<h2 class="section-title">Services I <span class="grad">Offer</span></h2>
+<p class="section-sub">End-to-end front-end work, from first pixel to deployed build.</p>
+</div>
+<div class="grid-auto reveal-grid">
+<div class="card icon-card">
+<i class="fas fa-code"></i>
+<h3>Frontend Development</h3>
+<p>Building modern, responsive websites with HTML, CSS and JavaScript.</p>
+</div>
+<div class="card icon-card">
+<i class="fas fa-palette"></i>
+<h3>UI/UX Design</h3>
+<p>Designing clean, intuitive interfaces that enhance user experience.</p>
+</div>
+<div class="card icon-card">
+<i class="fas fa-diagram-project"></i>
+<h3>React Applications</h3>
+<p>Component-based single-page apps with routing and clean state.</p>
+</div>
+<div class="card icon-card">
+<i class="fas fa-mobile-alt"></i>
+<h3>Responsive Design</h3>
+<p>Websites that adapt seamlessly across desktop, tablet and mobile.</p>
+</div>
+<div class="card icon-card">
+<i class="fas fa-magnifying-glass"></i>
+<h3>SEO Optimization</h3>
+<p>Semantic structure and best practices to improve visibility.</p>
+</div>
+<div class="card icon-card">
+<i class="fas fa-tools"></i>
+<h3>Website Maintenance</h3>
+<p>Updates, bug fixes and performance improvements, ongoing.</p>
+</div>
+</div>
+<div style="text-align:center;margin-top:44px;">
+<a class="btn-ghost" href="services.html">See the full service breakdown <i class="fas fa-arrow-right"></i></a>
+</div>
+</section>
 
-      <article class="project-card reveal">
-        <div class="project-num">02</div>
-        <h3>WhatsApp Management System</h3>
-        <p>Designed 12 UML diagrams (Class, Use Case, ERD) and developed a complete structural messaging framework in C++ using OOP.</p>
-        <div class="tags"><span>C++</span><span>OOP</span><span>UML</span></div>
-      </article>
+<section class="journey-teaser" id="journey">
+<div class="section-head reveal">
+<span class="eyebrow">Experience</span>
+<h2 class="section-title">My <span class="grad">Journey</span> so far</h2>
+<p class="section-sub">Three internships, each one sharpening a different part of the stack.</p>
+</div>
+<div class="grid-auto reveal-grid">
+<div class="card experience-card">
+<h3>Oasis Infobyte</h3>
+<span>Web Dev Intern &middot; Jun–Jul 2026</span>
+<p>Built responsive web pages and strengthened HTML, CSS and JavaScript fundamentals on real project briefs.</p>
+</div>
+<div class="card experience-card">
+<h3>Synent Technologies</h3>
+<span>Web Dev Intern &middot; Jun–Jul 2026</span>
+<p>Worked on responsive interfaces, authentication pages and modern frontend layouts.</p>
+</div>
+<div class="card experience-card">
+<h3>EurosHub</h3>
+<span>Web Dev Intern &middot; Jul 2026–Present</span>
+<p>Developing responsive interfaces and gaining hands-on experience with the MERN ecosystem.</p>
+</div>
+</div>
+<div style="text-align:center;margin-top:44px;">
+<a class="btn-ghost" href="journey.html">View the full timeline <i class="fas fa-arrow-right"></i></a>
+</div>
+</section>
 
-      <article class="project-card reveal">
-        <div class="project-num">03</div>
-        <h3>AI Flood Warning System</h3>
-        <p>Handled the full SDLC from requirements gathering to engineering a normalized (1NF–3NF) relational database backend for real-time routing.</p>
-        <div class="tags"><span>SDLC</span><span>SQL</span><span>DB Design</span></div>
-      </article>
+<section class="projects-section" id="projects">
+<div class="section-head reveal">
+<span class="eyebrow">Selected Work</span>
+<h2 class="section-title">Featured <span class="grad">Projects</span></h2>
+<p class="section-sub">A handful of real, deployed builds — 16 total live across my GitHub.</p>
+</div>
+<div class="coverflow" data-coverflow>
+<div class="coverflow-stage">
+<div class="coverflow-track">
 
-      <article class="project-card reveal">
-        <div class="project-num">04</div>
-        <h3>Smart Home Device Controller</h3>
-        <p>A modular, memory-efficient C++ console application for appliance automation, built on core OOP principles — inheritance and polymorphism.</p>
-        <div class="tags"><span>C++</span><span>OOP</span></div>
-      </article>
+<article class="coverflow-item">
+<div class="card project-card">
+<div class="project-media cover-violet"><i class="fas fa-building"></i></div>
+<div class="project-body">
+<h3>EurosHub — Company Website</h3>
+<p>Multi-page marketing site built during my EurosHub internship — home, about, services, portfolio and team pages, fully responsive.</p>
+<div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+<div class="project-links">
+<a class="btn-ghost" href="https://github.com/maleehanadeemeuroshub-maker/FINAL-Euroshub-landng-Page" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+<a class="btn" href="https://final-euroshub-landng-page.vercel.app" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Live Demo</a>
+</div>
+</div>
+</div>
+</article>
 
-      <article class="project-card reveal">
-        <div class="project-num">05</div>
-        <h3>Bank Management System</h3>
-        <p>A secure transaction and account management console application using C++ file handling for structured data persistence.</p>
-        <div class="tags"><span>C++</span><span>File Handling</span></div>
-      </article>
+<article class="coverflow-item">
+<div class="card project-card">
+<div class="project-media cover-rose"><i class="fas fa-feather-pointed"></i></div>
+<div class="project-body">
+<h3>DevNotes — Blog Platform</h3>
+<p>A React + Vite blog with routed pages for home, articles, categories and contact, built around reusable components and hooks.</p>
+<div class="tech-stack"><span>React</span><span>Vite</span><span>JavaScript</span></div>
+<div class="project-links">
+<a class="btn-ghost" href="https://github.com/maleehanadeemeuroshub-maker/BLOG-website" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+<a class="btn" href="https://blog-website-euros-hub1.vercel.app" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Live Demo</a>
+</div>
+</div>
+</div>
+</article>
 
-      <article class="project-card reveal">
-        <div class="project-num">06</div>
-        <h3>ICT Branding Project</h3>
-        <p>Created corporate logos, brochures, and promotional layouts applying digital branding matrices and modern UI/UX design standards.</p>
-        <div class="tags"><span>Branding</span><span>UI/UX</span></div>
-      </article>
+<article class="coverflow-item">
+<div class="card project-card">
+<div class="project-media cover-amber"><i class="fas fa-film"></i></div>
+<div class="project-body">
+<h3>Netflix Clone</h3>
+<p>Front-end clone of the Netflix landing and browse experience, including a sign-up flow and a streaming page with movie rows.</p>
+<div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+<div class="project-links">
+<a class="btn-ghost" href="https://github.com/maleehanadeemeuroshub-maker/NETFLIXX" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+<a class="btn" href="https://netflixx-olive.vercel.app" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Live Demo</a>
+</div>
+</div>
+</div>
+</article>
 
-    </div>
-  </section>
+</div>
+</div>
+<div class="coverflow-nav">
+<button type="button" class="coverflow-arrow prev" aria-label="Previous project"><i class="fas fa-chevron-left"></i></button>
+<div class="coverflow-dots"></div>
+<button type="button" class="coverflow-arrow next" aria-label="Next project"><i class="fas fa-chevron-right"></i></button>
+</div>
+</div>
+<div style="text-align:center;margin-top:20px;">
+<a class="btn" href="projects.html"><i class="fas fa-layer-group"></i> View All 16 Projects</a>
+</div>
+</section>
 
-  <section id="contact" class="section contact-section">
-    <p class="section-tag reveal">05 — Contact</p>
-    <h2 class="section-title reveal">Let's Connect</h2>
-    <p class="contact-sub reveal">Open to internships, collaborations, and interesting problems to solve.</p>
-    <div class="contact-grid reveal">
-      <a class="contact-card" href="mailto:maleehanadeem777@gmail.com">
-        <span class="contact-label">Email</span>
-        <span class="contact-value">maleehanadeem777@gmail.com</span>
-      </a>
-      <a class="contact-card" href="tel:+923484371772">
-        <span class="contact-label">Phone</span>
-        <span class="contact-value">+92 348 4371772</span>
-      </a>
-      <a class="contact-card" href="https://github.com/maleehanadeem13" target="_blank" rel="noopener">
-        <span class="contact-label">GitHub</span>
-        <span class="contact-value">github.com/maleehanadeem13</span>
-      </a>
-      <div class="contact-card contact-static">
-        <span class="contact-label">Location</span>
-        <span class="contact-value">Rawalpindi, Pakistan</span>
-      </div>
-    </div>
-  </section>
+<section class="cta-section" id="contact">
+<div class="reveal">
+<span class="eyebrow" style="justify-content:center;">Let's Talk</span>
+<h2>Have a project in mind?</h2>
+<p>I'm actively looking for internships, freelance work and collaborations. Let's build something real together.</p>
+<a class="btn" href="contact.html"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+</div>
+</section>
 
 </main>
-
 <footer>
-  <p>Designed &amp; built by Maleeha Nadeem · <span id="year"></span></p>
+<div class="footer-inner">
+<div class="footer-brand">
+<a class="nav-brand" href="index.html" style="text-decoration:none;">
+<span class="brand-mark">MN</span>
+<div class="logo"><h1>Maleeha Nadeem</h1></div>
+</a>
+<p>Full Stack / MERN developer building clean, responsive, user-friendly web experiences — currently interning at EurosHub.</p>
+<div class="footer-social">
+<a href="https://github.com/maleehanadeemeuroshub-maker" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+<a href="https://www.linkedin.com/in/maleeha-nadeem" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://www.instagram.com/1maleeha_nadeem" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="mailto:maleehanadeem777@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+</div>
+</div>
+<div class="footer-links">
+<div class="footer-col">
+<h4>Navigate</h4>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="journey.html">Journey</a>
+<a href="projects.html">Projects</a>
+</div>
+<div class="footer-col">
+<h4>Get In Touch</h4>
+<a href="mailto:maleehanadeem777@gmail.com">maleehanadeem777@gmail.com</a>
+<a href="contact.html">Contact Page</a>
+<a href="Maleeha Nadeem -Full Stack DEVELOPER CV.pdf" target="_blank">Download CV</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; <span data-year>2026</span> Maleeha Nadeem. All rights reserved.</p>
+<button type="button" id="backToTop" aria-label="Back to top" style="display:none;"><i class="fas fa-arrow-up"></i></button>
+</div>
 </footer>
-
-<script src="script.js"></script>
+<script src="script.js?v=3"></script>
 </body>
 </html>

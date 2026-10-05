@@ -1,11 +1,265 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>About Me</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About | Maleeha Nadeem</title>
+<meta name="description" content="About Maleeha Nadeem — aspiring Full Stack / MERN developer, her skills, education and what drives her work."/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%238c7bff'/%3E%3Cstop offset='100%25' stop-color='%23ff7ab0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='26' fill='white' text-anchor='middle'%3EMN%3C/text%3E%3C/svg%3E"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
 </head>
 <body>
-  <h1>About Me</h1>
-  <p>I am a BS Software Engineering student learning Cloud Computing.</p>
-  <p><a href="index.html">Back to Home</a></p>
+<canvas id="constellation" aria-hidden="true"></canvas>
+<header class="navbar">
+<a class="nav-brand" href="index.html">
+<span class="brand-mark">MN</span>
+<div class="logo">
+<h1>Maleeha Nadeem</h1>
+<h3>Full Stack / MERN Developer</h3>
+</div>
+</a>
+<input class="drawer-toggle" hidden="" id="drawerToggle" type="checkbox"/>
+<label aria-label="Open menu" class="hamburger" for="drawerToggle">
+<span></span><span></span><span></span>
+</label>
+<div class="nav-menu" id="navMenu">
+<label aria-label="Close menu" class="drawer-close" for="drawerToggle">
+<i class="fas fa-times"></i>
+</label>
+<nav>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a class="active" href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="journey.html">Journey</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+<a class="btn-small drawer-cta" href="contact.html">Let's Talk</a>
+</div>
+<label aria-label="Close menu" class="drawer-overlay" for="drawerToggle"></label>
+</header>
+<main>
+
+<section class="page-hero">
+<div class="hero-content">
+<span class="eyebrow">Get To Know Me</span>
+<h2>About <span class="grad highlight">Me</span></h2>
+<p class="hero-lede" style="opacity:1;animation:none;">Passionate web developer creating modern, responsive and user-friendly websites with clean design and efficient code.</p>
+</div>
+<div class="hero-image-container">
+<div class="hero-visual" style="width:min(260px,60vw);height:min(260px,60vw);">
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="avatar-frame"><img alt="Maleeha Nadeem" src="profile_picture.png"/></div>
+</div>
+</div>
+</section>
+
+<section class="about-container">
+<div class="about-image reveal-left">
+<div class="avatar-frame"><img alt="Maleeha Nadeem" src="profile_picture.png"/></div>
+</div>
+<div class="about-content reveal-right">
+<h2>Who Am I?</h2>
+<p>Hello! I'm <strong style="color:var(--text-primary);">Maleeha Nadeem</strong>, an aspiring Full Stack Web Developer with a passion for designing responsive, attractive, and user-friendly websites. I enjoy transforming creative ideas into modern digital experiences using HTML, CSS, JavaScript and React.</p>
+<p>I'm currently completing web development internships where I work on real-world projects and continuously sharpen my frontend skills — most recently building interfaces for EurosHub. My long-term goal is to become a professional MERN Stack developer contributing to innovative software.</p>
+<p>I believe in continuous learning, clean coding practices, and building websites that are visually appealing, responsive and easy to use on every device — all 24+ of my public repositories reflect that habit of finishing what I start.</p>
+</div>
+</section>
+
+<section class="skills-section">
+<div class="section-head reveal">
+<span class="eyebrow">Toolkit</span>
+<h2 class="section-title">My <span class="grad">Skills</span></h2>
+</div>
+<div class="grid-auto reveal-grid">
+<div class="card icon-card">
+<i class="fab fa-html5"></i>
+<h3>HTML5</h3>
+<p>Semantic and well-structured web pages.</p>
+</div>
+<div class="card icon-card">
+<i class="fab fa-css3-alt"></i>
+<h3>CSS3</h3>
+<p>Modern layouts using Flexbox, Grid and media queries.</p>
+</div>
+<div class="card icon-card">
+<i class="fab fa-js-square"></i>
+<h3>JavaScript</h3>
+<p>Interactive and dynamic web applications.</p>
+</div>
+<div class="card icon-card">
+<i class="fab fa-react"></i>
+<h3>React</h3>
+<p>Component-driven SPAs with hooks and client-side routing.</p>
+</div>
+<div class="card icon-card">
+<i class="fas fa-mobile-alt"></i>
+<h3>Responsive Design</h3>
+<p>Websites that work perfectly on every screen.</p>
+</div>
+<div class="card icon-card">
+<i class="fas fa-layer-group"></i>
+<h3>MERN Stack</h3>
+<p>Currently deepening MongoDB, Express, React &amp; Node.js.</p>
+</div>
+</div>
+</section>
+
+<section class="education-section">
+<div class="section-head reveal">
+<span class="eyebrow">Education</span>
+<h2 class="section-title">Academic <span class="grad">Background</span></h2>
+</div>
+<div class="grid-auto reveal-grid">
+<div class="card education-card">
+<h3>SSC (Secondary School Certificate)</h3>
+<h4>Science Group</h4>
+<span>Completed</span>
+<p>Strong academic foundation in Mathematics, Computer Science and General Science.</p>
+</div>
+<div class="card education-card">
+<h3>HSSC (Higher Secondary School Certificate)</h3>
+<h4>ICS</h4>
+<span>Completed</span>
+<p>Developed analytical thinking, problem-solving ability and a growing interest in technology.</p>
+</div>
+<div class="card education-card">
+<h3>Bachelor of Science in Software Engineering</h3>
+<h4>BSSE</h4>
+<span>2024 – Present</span>
+<p>Pursuing BS Software Engineering while gaining practical experience through internships and real projects.</p>
+</div>
+</div>
+</section>
+
+<section class="facts-section">
+<div class="section-head reveal">
+<span class="eyebrow">By The Numbers</span>
+<h2 class="section-title">Quick <span class="grad">Facts</span></h2>
+</div>
+<div class="grid-4 reveal-grid">
+<div class="card fact-card"><h2>3+</h2><p>Internships</p></div>
+<div class="card fact-card"><h2>16</h2><p>Live Projects</p></div>
+<div class="card fact-card"><h2>24+</h2><p>GitHub Repos</p></div>
+<div class="card fact-card"><h2>100%</h2><p>Learning Passion</p></div>
+</div>
+</section>
+
+<section class="experience-section">
+<div class="section-head reveal">
+<span class="eyebrow">Track Record</span>
+<h2 class="section-title">My <span class="grad">Experience</span></h2>
+</div>
+<div class="grid-auto reveal-grid">
+<div class="card experience-card">
+<h3>Oasis Infobyte</h3>
+<span>Web Development Intern</span>
+<p>Developed responsive websites and completed practical web development projects using HTML, CSS and JavaScript.</p>
+</div>
+<div class="card experience-card">
+<h3>Synent Technologies</h3>
+<span>Web Development Intern</span>
+<p>Worked on responsive layouts, authentication pages and modern user interfaces while improving frontend skills.</p>
+</div>
+<div class="card experience-card">
+<h3>EurosHub</h3>
+<span>Web Development Intern</span>
+<p>Building responsive websites and learning real-world web development practices on live client work.</p>
+</div>
+</div>
+</section>
+
+<section class="hire-section">
+<div class="section-head reveal">
+<span class="eyebrow">Why Me</span>
+<h2 class="section-title">Why Hire <span class="grad">Me?</span></h2>
+</div>
+<div class="grid-4 reveal-grid">
+<div class="card icon-card">
+<i class="fas fa-code"></i>
+<h3>Clean Code</h3>
+<p>Well-structured, readable code following best practices.</p>
+</div>
+<div class="card icon-card">
+<i class="fas fa-mobile-alt"></i>
+<h3>Responsive Design</h3>
+<p>Works perfectly on desktop, tablet and mobile.</p>
+</div>
+<div class="card icon-card">
+<i class="fas fa-lightbulb"></i>
+<h3>Creative Thinking</h3>
+<p>Modern, user-friendly interface design.</p>
+</div>
+<div class="card icon-card">
+<i class="fas fa-users"></i>
+<h3>Team Player</h3>
+<p>Comfortable working with teams and learning from others.</p>
+</div>
+</div>
+</section>
+
+<section class="goal-section">
+<div class="section-head reveal">
+<span class="eyebrow">Looking Ahead</span>
+<h2 class="section-title">Career <span class="grad">Goal</span></h2>
+</div>
+<div class="card goal-card reveal">
+<p>My ambition is to become a skilled Full Stack MERN developer who builds innovative, responsive and user-friendly web applications. I believe in continuous learning, solving real-world problems and contributing to impactful software projects.</p>
+</div>
+</section>
+
+<section class="cta-section">
+<div class="reveal">
+<h2>Let's Build Something Amazing Together!</h2>
+<p>I'm always excited to learn, collaborate and work on new web development opportunities.</p>
+<a class="btn" href="contact.html">Contact Me</a>
+</div>
+</section>
+
+</main>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<a class="nav-brand" href="index.html" style="text-decoration:none;">
+<span class="brand-mark">MN</span>
+<div class="logo"><h1>Maleeha Nadeem</h1></div>
+</a>
+<p>Full Stack / MERN developer building clean, responsive, user-friendly web experiences — currently interning at EurosHub.</p>
+<div class="footer-social">
+<a href="https://github.com/maleehanadeemeuroshub-maker" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+<a href="https://www.linkedin.com/in/maleeha-nadeem" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://www.instagram.com/1maleeha_nadeem" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="mailto:maleehanadeem777@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+</div>
+</div>
+<div class="footer-links">
+<div class="footer-col">
+<h4>Navigate</h4>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="journey.html">Journey</a>
+<a href="projects.html">Projects</a>
+</div>
+<div class="footer-col">
+<h4>Get In Touch</h4>
+<a href="mailto:maleehanadeem777@gmail.com">maleehanadeem777@gmail.com</a>
+<a href="contact.html">Contact Page</a>
+<a href="Maleeha Nadeem -Full Stack DEVELOPER CV.pdf" target="_blank">Download CV</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; <span data-year>2026</span> Maleeha Nadeem. All rights reserved.</p>
+<button type="button" id="backToTop" aria-label="Back to top" style="display:none;"><i class="fas fa-arrow-up"></i></button>
+</div>
+</footer>
+<script src="script.js?v=3"></script>
 </body>
 </html>

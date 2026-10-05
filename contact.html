@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact | Maleeha Nadeem</title>
+<meta name="description" content="Get in touch with Maleeha Nadeem for internships, freelance web development work or collaboration."/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%238c7bff'/%3E%3Cstop offset='100%25' stop-color='%23ff7ab0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='26' fill='white' text-anchor='middle'%3EMN%3C/text%3E%3C/svg%3E"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<canvas id="constellation" aria-hidden="true"></canvas>
+<header class="navbar">
+<a class="nav-brand" href="index.html">
+<span class="brand-mark">MN</span>
+<div class="logo">
+<h1>Maleeha Nadeem</h1>
+<h3>Full Stack / MERN Developer</h3>
+</div>
+</a>
+<input class="drawer-toggle" hidden="" id="drawerToggle" type="checkbox"/>
+<label aria-label="Open menu" class="hamburger" for="drawerToggle">
+<span></span><span></span><span></span>
+</label>
+<div class="nav-menu" id="navMenu">
+<label aria-label="Close menu" class="drawer-close" for="drawerToggle">
+<i class="fas fa-times"></i>
+</label>
+<nav>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="index.html#education">Education</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="journey.html">Journey</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a class="active" href="contact.html">Contact</a></li>
+</ul>
+</nav>
+<a class="btn-small drawer-cta" href="contact.html">Let's Talk</a>
+</div>
+<label aria-label="Close menu" class="drawer-overlay" for="drawerToggle"></label>
+</header>
+<main>
+
+<section class="page-hero">
+<div class="hero-content">
+<span class="eyebrow">Get In Touch</span>
+<h2>Contact <span class="grad highlight">Me</span></h2>
+<p class="hero-lede" style="opacity:1;animation:none;">Have a project in mind? Want to collaborate or discuss an opportunity? I'd love to hear from you.</p>
+</div>
+<div class="hero-image-container">
+<div class="hero-visual" style="width:min(260px,60vw);height:min(260px,60vw);">
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="avatar-frame"><img alt="Maleeha Nadeem" src="profile_picture.png"/></div>
+</div>
+</div>
+</section>
+
+<section class="contact-section">
+<div class="section-head reveal">
+<span class="eyebrow">Say Hello</span>
+<h2 class="section-title">Let's <span class="grad">Connect</span></h2>
+</div>
+<div class="card contact-container reveal">
+<div class="contact-info-direct">
+<h3>Contact Information</h3>
+<p><i class="fas fa-envelope"></i><span><strong>Email</strong>maleehanadeem777@gmail.com</span></p>
+<p><i class="fab fa-linkedin"></i><span><strong>LinkedIn</strong>linkedin.com/in/maleeha-nadeem</span></p>
+<p><i class="fab fa-github"></i><span><strong>GitHub</strong>github.com/maleehanadeemeuroshub-maker</span></p>
+<p><i class="fas fa-map-marker-alt"></i><span><strong>Location</strong>Pakistan</span></p>
+</div>
+<form class="contact-form">
+<input pattern="[A-Za-z\s]+" placeholder="Your Full Name" required="" title="Only letters are allowed" type="text"/>
+<span class="field-error">Only letters are allowed in the name field</span>
+<input placeholder="Email Address" required="" type="email"/>
+<span class="field-error">Please enter a valid email address</span>
+<input pattern="[0-9]{7,15}" placeholder="Phone Number" required="" title="Only numbers are allowed (7-15 digits)" type="tel"/>
+<span class="field-error">Only numbers are allowed (7-15 digits)</span>
+<input placeholder="Subject" required="" type="text"/>
+<span class="field-error">This field is required</span>
+<textarea placeholder="Write Your Message..." required=""></textarea>
+<span class="field-error">This field is required</span>
+<button class="btn" type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+<p class="form-status" role="status"></p>
+</form>
+</div>
+</section>
+
+<section class="services-section">
+<div class="section-head reveal">
+<span class="eyebrow">Why Work With Me</span>
+<h2 class="section-title">What You <span class="grad">Get</span></h2>
+</div>
+<div class="grid-auto reveal-grid">
+<div class="card icon-card">
+<i class="fas fa-code"></i>
+<h3>Clean Code</h3>
+<p>I develop clean, organized and maintainable websites using modern HTML, CSS, JavaScript and React.</p>
+</div>
+<div class="card icon-card">
+<i class="fas fa-mobile-alt"></i>
+<h3>Responsive Design</h3>
+<p>Every website is fully responsive and works smoothly on desktops, tablets and mobile devices.</p>
+</div>
+<div class="card icon-card">
+<i class="fas fa-clock"></i>
+<h3>On-Time Delivery</h3>
+<p>I value deadlines and ensure projects are completed with quality and professionalism.</p>
+</div>
+</div>
+</section>
+
+<section class="faq-section">
+<div class="section-head reveal">
+<span class="eyebrow">FAQ</span>
+<h2 class="section-title">Frequently Asked <span class="grad">Questions</span></h2>
+</div>
+<div class="grid-auto reveal-grid">
+<div class="card faq-card">
+<h3>What services do you provide?</h3>
+<p>I build responsive websites, React applications, landing pages, portfolio websites and frontend user interfaces.</p>
+</div>
+<div class="card faq-card">
+<h3>Which technologies do you use?</h3>
+<p>HTML5, CSS3, JavaScript, React, Flexbox, CSS Grid and responsive design — moving toward the full MERN stack.</p>
+</div>
+<div class="card faq-card">
+<h3>Are you available for internships?</h3>
+<p>Yes. I'm actively looking for internships and freelance opportunities to gain practical experience.</p>
+</div>
+</div>
+</section>
+
+<section class="technology-section">
+<div class="section-head reveal">
+<span class="eyebrow">Elsewhere</span>
+<h2 class="section-title">Connect With <span class="grad">Me</span></h2>
+</div>
+<div class="social-links reveal-grid">
+<a class="card social-card" href="https://www.linkedin.com/in/maleeha-nadeem" target="_blank" rel="noopener">
+<i class="fab fa-linkedin"></i>
+<span>LinkedIn</span>
+</a>
+<a class="card social-card" href="https://github.com/maleehanadeemeuroshub-maker" target="_blank" rel="noopener">
+<i class="fab fa-github"></i>
+<span>GitHub</span>
+</a>
+<a class="card social-card" href="mailto:maleehanadeem777@gmail.com">
+<i class="fas fa-envelope"></i>
+<span>Gmail</span>
+</a>
+<a class="card social-card" href="https://www.instagram.com/1maleeha_nadeem" target="_blank" rel="noopener">
+<i class="fab fa-instagram"></i>
+<span>Instagram</span>
+</a>
+</div>
+</section>
+
+<section class="cta-section">
+<div class="reveal">
+<h2>Let's Build Something Amazing!</h2>
+<p>Thank you for visiting my portfolio. Feel free to reach out for internships, collaborations or web development projects.</p>
+<a class="btn" href="index.html">Back To Home</a>
+</div>
+</section>
+
+</main>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<a class="nav-brand" href="index.html" style="text-decoration:none;">
+<span class="brand-mark">MN</span>
+<div class="logo"><h1>Maleeha Nadeem</h1></div>
+</a>
+<p>Full Stack / MERN developer building clean, responsive, user-friendly web experiences — currently interning at EurosHub.</p>
+<div class="footer-social">
+<a href="https://github.com/maleehanadeemeuroshub-maker" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+<a href="https://www.linkedin.com/in/maleeha-nadeem" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://www.instagram.com/1maleeha_nadeem" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="mailto:maleehanadeem777@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+</div>
+</div>
+<div class="footer-links">
+<div class="footer-col">
+<h4>Navigate</h4>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="projects.html">Projects</a>
+</div>
+<div class="footer-col">
+<h4>Get In Touch</h4>
+<a href="mailto:maleehanadeem777@gmail.com">maleehanadeem777@gmail.com</a>
+<a href="Maleeha Nadeem -Full Stack DEVELOPER CV.pdf" target="_blank">Download CV</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; <span data-year>2026</span> Maleeha Nadeem. All rights reserved.</p>
+<button type="button" id="backToTop" aria-label="Back to top" style="display:none;"><i class="fas fa-arrow-up"></i></button>
+</div>
+</footer>
+<script src="script.js?v=3"></script>
+</body>
+</html>

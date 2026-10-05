@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projects | Maleeha Nadeem</title>
+<meta name="description" content="16 real, deployed projects by Maleeha Nadeem — client sites, React apps and vanilla JS builds, each with source code and a live demo."/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%238c7bff'/%3E%3Cstop offset='100%25' stop-color='%23ff7ab0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='700' font-size='26' fill='white' text-anchor='middle'%3EMN%3C/text%3E%3C/svg%3E"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<canvas id="constellation" aria-hidden="true"></canvas>
+<header class="navbar">
+<a class="nav-brand" href="index.html">
+<span class="brand-mark">MN</span>
+<div class="logo">
+<h1>Maleeha Nadeem</h1>
+<h3>Full Stack / MERN Developer</h3>
+</div>
+</a>
+<input class="drawer-toggle" hidden="" id="drawerToggle" type="checkbox"/>
+<label aria-label="Open menu" class="hamburger" for="drawerToggle">
+<span></span><span></span><span></span>
+</label>
+<div class="nav-menu" id="navMenu">
+<label aria-label="Close menu" class="drawer-close" for="drawerToggle">
+<i class="fas fa-times"></i>
+</label>
+<nav>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="index.html#education">Education</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="journey.html">Journey</a></li>
+<li><a class="active" href="projects.html">Projects</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+<a class="btn-small drawer-cta" href="contact.html">Let's Talk</a>
+</div>
+<label aria-label="Close menu" class="drawer-overlay" for="drawerToggle"></label>
+</header>
+<main>
+
+<section class="page-hero" style="min-height:44vh;">
+<div class="hero-content" style="flex:1;">
+<span class="eyebrow">My Portfolio</span>
+<h2>Featured <span class="grad highlight">Projects</span></h2>
+<p class="hero-lede" style="opacity:1;animation:none;max-width:640px;">16 real, deployed projects — client sites, React apps and vanilla-JS builds — each one with real source code on GitHub and a live demo you can click through right now.</p>
+</div>
+</section>
+
+<section>
+<div class="filter-bar reveal">
+<button type="button" class="filter-btn active" data-filter="all">All Projects</button>
+<button type="button" class="filter-btn" data-filter="featured">Featured</button>
+<button type="button" class="filter-btn" data-filter="react">React</button>
+<button type="button" class="filter-btn" data-filter="vanilla">Vanilla JS</button>
+<button type="button" class="filter-btn" data-filter="client">Client Work</button>
+</div>
+
+<div class="section-head reveal" style="margin-bottom:30px;">
+<span class="eyebrow">Highlights</span>
+<h2 class="section-title">Featured <span class="grad">Builds</span></h2>
+</div>
+
+<div class="coverflow" data-coverflow>
+<div class="coverflow-stage">
+<div class="coverflow-track">
+
+<article class="coverflow-item">
+<div class="card project-card">
+<div class="project-media cover-violet"><span class="project-tag">Featured</span><i class="fas fa-building"></i></div>
+<div class="project-body">
+<h3>EurosHub — Company Website</h3>
+<p>Multi-page marketing website for EurosHub, built during a web development internship — home, about, services, portfolio, team and testimonials pages with semantic HTML and fully responsive CSS, deployed live for the client.</p>
+<div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive</span></div>
+<div class="project-links">
+<a class="btn-ghost" href="https://github.com/maleehanadeemeuroshub-maker/FINAL-Euroshub-landng-Page" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+<a class="btn" href="https://final-euroshub-landng-page.vercel.app" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Live Demo</a>
+</div>
+</div>
+</div>
+</article>
+
+<article class="coverflow-item">
+<div class="card project-card">
+<div class="project-media cover-rose"><span class="project-tag">Featured</span><i class="fas fa-feather-pointed"></i></div>
+<div class="project-body">
+<h3>DevNotes — Blog Platform</h3>
+<p>A React + Vite blog platform with routed pages for home, blog listing, article detail, categories and contact — built around reusable components, context and custom hooks.</p>
+<div class="tech-stack"><span>React</span><span>Vite</span><span>React Router</span><span>JavaScript</span></div>
+<div class="project-links">
+<a class="btn-ghost" href="https://github.com/maleehanadeemeuroshub-maker/BLOG-website" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+<a class="btn" href="https://blog-website-euros-hub1.vercel.app" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Live Demo</a>
+</div>
+</div>
+</div>
+</article>
+
+<article class="coverflow-item">
+<div class="card project-card">
+<div class="project-media cover-amber"><span class="project-tag">Featured</span><i class="fas fa-film"></i></div>
+<div class="project-body">
+<h3>Netflix Clone</h3>
+<p>A front-end clone of the Netflix landing and browse experience — hero sign-up flow, feature highlights, FAQ accordion and a browsable streaming page with movie rows, built in plain HTML, CSS and JavaScript.</p>
+<div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+<div class="project-links">
+<a class="btn-ghost" href="https://github.com/maleehanadeemeuroshub-maker/NETFLIXX" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+<a class="btn" href="https://netflixx-olive.vercel.app" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Live Demo</a>
+</div>
+</div>
+</div>
+</article>
+
+<article class="coverflow-item">
+<div class="card project-card">
+<div class="project-media cover-teal"><span class="project-tag">Featured</span><i class="fas fa-chart-line"></i></div>
+<div class="project-body">
+<h3>StudyDesk — Student Dashboard</h3>
+<p>A single-page student dashboard for tracking courses, homework, grades and a weekly class schedule, with term-progress tracking and quick stats — all data persisted locally in the browser.</p>
+<div class="tech-stack"><span>HTML5</span><span>Tailwind CSS</span><span>JavaScript</span></div>
+<div class="project-links">
+<a class="btn-ghost" href="https://github.com/maleehanadeemeuroshub-maker/dashboard" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+<a class="btn" href="https://dashboard-euros-hub1.vercel.app" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Live Demo</a>
+</div>
+</div>
+</div>
+</article>
+
+<article class="coverflow-item">
+<div class="card project-card">
+<div class="project-media cover-violet"><span class="project-tag">Featured</span><i class="fas fa-calculator"></i></div>
+<div class="project-body">
+<h3>Calculator Hub</h3>
+<p>A hub of 11 calculator tools — basic, scientific, BMI, age, currency, date difference, discount, EMI, interest, percentage and tip/unit converters — sharing one visual system and a set of common JS helpers.</p>
+<div class="tech-stack"><span>HTML5</span><span>Tailwind CSS</span><span>JavaScript</span></div>
+<div class="project-links">
+<a class="btn-ghost" href="https://github.com/maleehanadeemeuroshub-maker/final-calculator" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+<a class="btn" href="https://final-calculator-pearl.vercel.app" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Live Demo</a>
+</div>
+</div>
+</div>
+</article>
+
+<article class="coverflow-item">
+<div class="card project-card">
+<div class="project-media cover-rose"><span class="project-tag">Featured</span><i class="fas fa-diagram-project"></i></div>
+<div class="project-body">
+<h3>Flux Todo — React Edition</h3>
+<p>A full React + Vite rebuild of the Flux Todo app as a single-page app with client-side routing — task board with search, sort, status/category filters and a progress ring, plus category management.</p>
+<div class="tech-stack"><span>React</span><span>Vite</span><span>React Router</span></div>
+<div class="project-links">
+<a class="btn-ghost" href="https://github.com/maleehanadeemeuroshub-maker/flux-react" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+<a class="btn" href="https://flux-react.vercel.app" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Live Demo</a>
+</div>
+</div>
+</div>
+</article>
+
+</div>
+</div>
+<div class="coverflow-nav">
+<button type="button" class="coverflow-arrow prev" aria-label="Previous project"><i class="fas fa-chevron-left"></i></button>
+<div class="coverflow-dots"></div>
+<button type="button" class="coverflow-arrow next" aria-label="Next project"><i class="fas fa-chevron-right"></i></button>
+</div>
+</div>
+
+<div class="section-head reveal" style="margin:70px 0 30px;">
+<span class="eyebrow">More Work</span>
+<h2 class="section-title">The Rest Of The <span class="grad">Build Log</span></h2>
+</div>
+
+<div class="projects-grid reveal-grid">
+
+<article class="card project-card" data-cat="react">
+<div class="project-media cover-amber"><i class="fas fa-circle-question"></i></div>
+<div class="project-body">
+<h3>Quizly</h3>
+<p>Pick a category, difficulty and question count, answer under an optional timer, get scored instantly with explanations, then track progress across rounds.</p>
+<div class="tech-stack"><span>React</span><span>Vite</span></div>
+<div class="project-links">
+<a class="btn-ghost" href="https://github.com/maleehanadeemeuroshub-maker/quizly" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+<a class="btn" href="https://quizly-eta-puce.vercel.app" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+</div>
+</div>
+</article>
+
+<article class="card project-card" data-cat="react">
+<div class="project-media cover-teal"><i class="fas fa-hashtag"></i></div>
+<div class="project-body">
+<h3>Counter</h3>
+<p>A counter built as a real product surface rather than a tutorial exercise — an editable bounded range, step control, session statistics and a timestamped activity log, all driven by React state.</p>
+<div class="tech-stack"><span>React</span><span>Vite</span></div>
+<div class="project-links">
+<a class="btn-ghost" href="https://github.com/maleehanadeemeuroshub-maker/counter" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+<a class="btn" href="https://counter-rust-eight.vercel.app" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+</div>
+</div>
+</article>
+
+<article class="card project-card" data-cat="vanilla">
+<div class="project-media cover-violet"><i class="fas fa-table-list"></i></div>
+<div class="project-body">
+<h3>Flux Todo — Multi-Page Edition</h3>
+<p>The original multi-page Flux Todo — a mobile-first to-do app with category color-coding and a persistent per-user data store, split into one HTML page per section.</p>
+<div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+<div class="project-links">
+<a class="btn-ghost" href="https://github.com/maleehanadeemeuroshub-maker/To-Do" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+<a class="btn" href="https://to-do-silk-beta.vercel.app" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+</div>
+</div>
+</article>
+
+<article class="card project-card" data-cat="vanilla">
+<div class="project-media cover-rose"><i class="fas fa-note-sticky"></i></div>
+<div class="project-body">
+<h3>Aurora — Notes App</h3>
+<p>A fast, distraction-free place to keep notes, lists and ideas, with a clean editor-first interface.</p>
+<div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+<div class="project-links">
+<a class="btn-ghost" href="https://github.com/maleehanadeemeuroshub-maker/notes" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+<a class="btn" href="https://notes-seven-inky.vercel.app" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+</div>
+</div>
+</article>
+
+<article class="card project-card" data-cat="vanilla">
+<div class="project-media cover-amber"><i class="fas fa-cloud-sun"></i></div>
+<div class="project-body">
+<h3>Weather — Sky, In Real Time</h3>
+<p>A real-time weather lookup app with a detail view for extended conditions, built in plain JavaScript against a live weather API.</p>
+<div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+<div class="project-links">
+<a class="btn-ghost" href="https://github.com/maleehanadeemeuroshub-maker/weather" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+<a class="btn" href="https://weather-euros-hub1.vercel.app" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+</div>
+</div>
+</article>
+
+<article class="card project-card" data-cat="vanilla">
+<div class="project-media cover-teal"><i class="fas fa-clapperboard"></i></div>
+<div class="project-body">
+<h3>Movie Search</h3>
+<p>A movie discovery app that searches and browses titles with poster art and details, built against a movie database API.</p>
+<div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+<div class="project-links">
+<a class="btn-ghost" href="https://github.com/maleehanadeemeuroshub-maker/movie-search" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+<a class="btn" href="https://movie-search-roan-eight.vercel.app" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+</div>
+</div>
+</article>
+
+<article class="card project-card" data-cat="vanilla">
+<div class="project-media cover-violet"><i class="fas fa-clock"></i></div>
+<div class="project-body">
+<h3>Clock Suite</h3>
+<p>A dependency-free collection of time tools — digital clock, flip clock, timer/stopwatch and world clock/time zone converter — sharing one navigation shell.</p>
+<div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>SVG</span><span>JavaScript</span></div>
+<div class="project-links">
+<a class="btn-ghost" href="https://github.com/maleehanadeemeuroshub-maker/live-clock" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+<a class="btn" href="https://live-clock-nu.vercel.app" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+</div>
+</div>
+</article>
+
+<article class="card project-card" data-cat="vanilla">
+<div class="project-media cover-rose"><i class="fas fa-book-open"></i></div>
+<div class="project-body">
+<h3>LearnHub</h3>
+<p>A front-end e-learning demo with a full simulated auth flow, a dashboard with stats and progress tracking, and a browsable course catalog — powered entirely by localStorage.</p>
+<div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+<div class="project-links">
+<a class="btn-ghost" href="https://github.com/maleehanadeemeuroshub-maker/signup-pages" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+<a class="btn" href="https://signup-pages-gybm.vercel.app" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+</div>
+</div>
+</article>
+
+<article class="card project-card" data-cat="vanilla">
+<div class="project-media cover-amber"><i class="fas fa-tags"></i></div>
+<div class="project-body">
+<h3>Claude Pricing Page Clone</h3>
+<p>A pixel-conscious recreation of Anthropic's Claude pricing page — mega-menus, sticky sub-nav, tabs and accordions, almost entirely powered by CSS <code>:checked</code>/<code>:has()</code> and native <code>&lt;details&gt;</code>.</p>
+<div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+<div class="project-links">
+<a class="btn-ghost" href="https://github.com/maleehanadeemeuroshub-maker/pricing-page-test" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+<a class="btn" href="https://pricing-page-test-three.vercel.app" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+</div>
+</div>
+</article>
+
+<article class="card project-card" data-cat="client vanilla">
+<div class="project-media cover-teal"><i class="fas fa-briefcase"></i></div>
+<div class="project-body">
+<h3>Butt Traders — Client Website</h3>
+<p>A freelance client project: a digital-services agency site covering offerings, team and contact — web/app development, SEO and content services across a multi-page static build.</p>
+<div class="tech-stack"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+<div class="project-links">
+<a class="btn-ghost" href="https://github.com/maleehanadeemeuroshub-maker/ButtTrader" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+<a class="btn" href="https://butt-trader.vercel.app" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+</div>
+</div>
+</article>
+
+</div>
+</section>
+
+<section>
+<div class="section-head reveal">
+<span class="eyebrow">Stack</span>
+<h2 class="section-title">Technologies <span class="grad">Used</span></h2>
+</div>
+<div class="tech-pill-row reveal">
+<span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>Vite</span><span>Node.js</span><span>Express.js</span><span>Tailwind CSS</span><span>Responsive Design</span><span>Flexbox</span><span>CSS Grid</span><span>Git</span><span>GitHub</span><span>VS Code</span>
+</div>
+</section>
+
+<section class="cta-section">
+<div class="reveal">
+<h2>Interested in Working Together?</h2>
+<p>I'm passionate about creating responsive, modern and user-friendly websites. Let's build something amazing together.</p>
+<a class="btn" href="contact.html">Hire Me</a>
+</div>
+</section>
+
+</main>
+<footer>
+<div class="footer-inner">
+<div class="footer-brand">
+<a class="nav-brand" href="index.html" style="text-decoration:none;">
+<span class="brand-mark">MN</span>
+<div class="logo"><h1>Maleeha Nadeem</h1></div>
+</a>
+<p>Full Stack / MERN developer building clean, responsive, user-friendly web experiences — currently interning at EurosHub.</p>
+<div class="footer-social">
+<a href="https://github.com/maleehanadeemeuroshub-maker" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+<a href="https://www.linkedin.com/in/maleeha-nadeem" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://www.instagram.com/1maleeha_nadeem" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="mailto:maleehanadeem777@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+</div>
+</div>
+<div class="footer-links">
+<div class="footer-col">
+<h4>Navigate</h4>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="journey.html">Journey</a>
+</div>
+<div class="footer-col">
+<h4>Get In Touch</h4>
+<a href="mailto:maleehanadeem777@gmail.com">maleehanadeem777@gmail.com</a>
+<a href="contact.html">Contact Page</a>
+<a href="Maleeha Nadeem -Full Stack DEVELOPER CV.pdf" target="_blank">Download CV</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; <span data-year>2026</span> Maleeha Nadeem. All rights reserved.</p>
+<button type="button" id="backToTop" aria-label="Back to top" style="display:none;"><i class="fas fa-arrow-up"></i></button>
+</div>
+</footer>
+<script src="script.js?v=3"></script>
+</body>
+</html>
